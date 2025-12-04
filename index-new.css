@@ -48,11 +48,15 @@ html, body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "jost", sans-serif;
   color: var(--dark);
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: var(--light);
+   background: linear-gradient(135deg, rgba(119, 4, 4, 0.85), rgba(84, 102, 21, 0.75)),
+              url("https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   /* ✅ Critical: Prevent initial flash and ensure proper rendering */
   opacity: 0;
   animation: bodyFadeIn 0.3s ease forwards;
@@ -64,7 +68,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "jost", sans-serif;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -96,7 +100,7 @@ header {
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 18px 20px;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -572,15 +576,16 @@ nav ul li a:hover {
 
 /* ================= TRUST BADGES ================= */
 .trust-badges {
-  background-color: skyblue;
+  background-color:#005fa3;
   padding: 60px 0;
   text-align: center;
 }
 
 .trust-badges h3 {
   margin-bottom: 40px;
-  color: black;
-  font-size: 1.5rem;
+  color: #005fa3;
+  font-size: 2.0rem;
+  font-weight: 500;
 }
 
 .badges-container {
@@ -630,27 +635,43 @@ nav ul li a:hover {
 
 /* ================= WHY CHOOSE US ================= */
 .why-us {
-  padding: 100px 0;
-  background-color: var(--white);
+  padding: 120px 20px; /* more breathing space */
+  background-color: rgba(255, 255, 255, 0.822);
   position: relative;
+  text-align: center;
 }
 
+.why-us h2 {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #005fa3;
+}
+
+.why-us p.section-subtitle {
+  font-size: 18px;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+/* Features grid */
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
 }
 
+/* Feature card */
 .feature-card {
-  background-color: var(--light);
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
+  background-color: #005fa3;
+  padding: 45px 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: var(--transition);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
 .feature-card::before {
@@ -660,16 +681,16 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 0;
-  background: var(--gradient-primary);
-  transition: var(--transition);
+  background: linear-gradient(135deg, #1fb6ff, #005fa3);
+  transition: all 0.5s ease;
   z-index: -1;
   opacity: 0;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
-  color: white;
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 
 .feature-card:hover::before {
@@ -677,51 +698,60 @@ nav ul li a:hover {
   opacity: 1;
 }
 
-.feature-card:hover h3,
-.feature-card:hover p,
-.feature-card:hover .feature-icon i {
-  color: white;
-}
-
+/* Feature Icon */
 .feature-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background-color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 25px;
-  transition: var(--transition);
+  transition: all 0.4s ease;
 }
 
 .feature-card:hover .feature-icon {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .feature-icon i {
-  font-size: 35px;
-  background: var(--gradient-primary);
+  font-size: 38px;
+  background: linear-gradient(135deg, #1fb6ff, #005fa3);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: var(--transition);
+  transition: all 0.4s ease;
 }
 
+/* Text inside card */
 .feature-card h3 {
+  font-size: 22px;
+  
   margin-bottom: 15px;
-  font-size: 20px;
-  transition: var(--transition);
+  transition: all 0.4s ease;
+  font-weight: 500;
+   color: rgb(202, 11, 177)
 }
 
 .feature-card p {
-  color: var(--gray);
-  transition: var(--transition);
+  font-size: 16px;
+  color:white;
+  line-height: 1.7;
+  transition: all 0.4s ease;
 }
+
+/* Hover text color */
+.feature-card:hover h3,
+.feature-card:hover p,
+.feature-card:hover .feature-icon i {
+  color: #fff;
+}
+
 
 /* ================= PARTNERSHIP SECTION ================= */
 .partnership {
-  background: var(--gradient-primary);
+  background:#005fa3;
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -734,6 +764,8 @@ nav ul li a:hover {
   margin-bottom: 30px;
   position: relative;
   z-index: 2;
+  font-weight: 500;
+   color: rgb(202, 11, 177);
 }
 
 .partnership p {
@@ -744,6 +776,8 @@ nav ul li a:hover {
   position: relative;
   z-index: 2;
 }
+
+/*stats*/
 
 .stats {
   display: flex;
@@ -761,7 +795,7 @@ nav ul li a:hover {
 
 .stat-number {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -792,6 +826,12 @@ nav ul li a:hover {
   background-color: var(--white);
 }
 
+.trust-signals h2{
+  color:#005fa3;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
 .trust-logos {
   display: flex;
   justify-content: center;
@@ -803,7 +843,7 @@ nav ul li a:hover {
 .trust-logo {
   width: 120px;
   height: 80px;
-  background: var(--light);
+  background: #005fa3;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -819,7 +859,7 @@ nav ul li a:hover {
 
 .trust-logo i {
   font-size: 40px;
-  background: var(--gradient-primary);
+  background: white;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -851,7 +891,7 @@ nav ul li a:hover {
 
 /* ================= FOOTER ================= */
 footer {
-  background-color: var(--dark);
+  background-color: black;
   color: white;
   padding: 100px 0 30px;
   position: relative;
@@ -869,6 +909,7 @@ footer {
   font-size: 18px;
   position: relative;
   display: inline-block;
+  color: #005fa3;
 }
 
 .footer-column h3::after {
@@ -918,7 +959,7 @@ footer {
   border: none;
   border-radius: 50px 0 0 50px;
   width: 70%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "jost", sans-serif;
 }
 
 .newsletter button {
@@ -979,7 +1020,7 @@ footer {
   padding: 14px 20px;
   border: 1px solid var(--light-gray);
   border-radius: 8px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "jost", sans-serif;
   transition: var(--transition);
 }
 
