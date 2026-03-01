@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block system folders
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Sitemap
+Sitemap: https://kibellanuniversalsolutions.co.ke/sitemap.xml
