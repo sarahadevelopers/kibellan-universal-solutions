@@ -1,212 +1,230 @@
-/* ====== Utilities & initial state ====== */
-document.addEventListener("DOMContentLoaded", () => {
-  const grid = document.getElementById("productsGrid");
-  const WA_NUMBER = "254704498509"; // client's WhatsApp number
+/* ============================================================
+   Kibellan — Products page
+   ============================================================ */
+(() => {
+  'use strict';
 
-  const yearEl = document.getElementById("year");
+  const WA_NUMBER   = '254704498509';      // WhatsApp only
+  const CALL_NUMBER = '+254112450228';     // Voice only
+
+  /* ---------- Year ---------- */
+  const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ====== Mobile nav (hamburger) ====== */
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  if (hamburger && navLinks) {
-    hamburger.addEventListener("click", () =>
-      navLinks.classList.toggle("active")
-    );
-    hamburger.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") navLinks.classList.toggle("active");
+  /* ---------- Mobile menu — robust toggle ---------- */
+  const toggle = document.getElementById('menuToggle');
+  const menu   = document.getElementById('navbarMenu');
+
+  const setMenu = (open) => {
+    if (!menu || !toggle) return;
+    menu.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    toggle.innerHTML = open
+      ? '<i class="fas fa-times" aria-hidden="true"></i>'
+      : '<i class="fas fa-bars" aria-hidden="true"></i>';
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setMenu(!menu.classList.contains('is-open'));
+    });
+
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setMenu(false);
+    });
+
+    // Close when resizing back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 860) setMenu(false);
     });
   }
 
-  /* ====== Category filter ====== */
-  const categoryBtns = document.querySelectorAll(".category-btn");
-  const productCards = document.querySelectorAll(".product-card");
+  /* ---------- Filtering ---------- */
+  const grid         = document.getElementById('productsGrid');
+  const cards        = grid ? Array.from(grid.querySelectorAll('.product-card')) : [];
+  const categoryBtns = Array.from(document.querySelectorAll('.category-btn'));
+  const searchInput  = document.getElementById('searchInput');
+  const resultsCount = document.getElementById('resultsCount');
+  const emptyState   = document.getElementById('emptyState');
+  const resetBtn     = document.getElementById('resetFilters');
 
-  categoryBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const prev = document.querySelector(".category-btn.active");
-      if (prev) prev.classList.remove("active");
-      btn.classList.add("active");
-      const category = btn.getAttribute("data-category");
-      productCards.forEach((card) => {
-        card.style.display =
-          category === "all" || card.dataset.category === category
-            ? "block"
-            : "none";
+  const state = { category: 'all', search: '' };
+
+  const updateVisible = () => {
+    let visible = 0;
+    const q = state.search.trim().toLowerCase();
+
+    cards.forEach(card => {
+      const cat  = (card.dataset.category || '').toLowerCase();
+      const name = (card.dataset.name || '').toLowerCase();
+      const desc = (card.dataset.desc || '').toLowerCase();
+
+      const catMatch    = state.category === 'all' || cat === state.category.toLowerCase();
+      const searchMatch = !q || name.includes(q) || desc.includes(q);
+      const show        = catMatch && searchMatch;
+
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    if (resultsCount) {
+      resultsCount.innerHTML = `Showing <strong>${visible}</strong> product${visible === 1 ? '' : 's'}`;
+    }
+    if (emptyState) emptyState.hidden = visible !== 0;
+  };
+
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
       });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      state.category = btn.dataset.category || 'all';
+      updateVisible();
     });
   });
 
-  /* ====== Modal logic ====== */
-  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImg");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalDesc = document.getElementById("modalDesc");
-  const modalPrice = document.getElementById("modalPrice");
-  const modalWhats = document.getElementById("modalWhats");
-  const modalClose = document.getElementById("modalClose");
-  const modalQuoteInline = document.getElementById("modalQuoteInline");
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      state.search = searchInput.value;
+      updateVisible();
+    });
+  }
 
-  function openModalFromCard(card) {
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.category = 'all';
+      state.search = '';
+      if (searchInput) searchInput.value = '';
+      categoryBtns.forEach(b => {
+        const on = b.dataset.category === 'all';
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      updateVisible();
+    });
+  }
+
+  document.querySelectorAll('[data-filter-link]').forEach(link => {
+    link.addEventListener('click', () => {
+      const t = link.dataset.filterLink;
+      const b = categoryBtns.find(x => x.dataset.category === t);
+      if (b) {
+        b.click();
+        document.getElementById('catalogue')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  /* ---------- Modal ---------- */
+  const modal         = document.getElementById('modal');
+  const modalImg      = document.getElementById('modalImg');
+  const modalTitle    = document.getElementById('modalTitle');
+  const modalDesc     = document.getElementById('modalDesc');
+  const modalPrice    = document.getElementById('modalPrice');
+  const modalUnit     = document.getElementById('modalUnit');
+  const modalCategory = document.getElementById('modalCategory');
+  const modalWhats    = document.getElementById('modalWhats');
+  const modalCall     = document.getElementById('modalCall');
+  const modalClose    = document.getElementById('modalClose');
+
+  let lastFocused = null;
+
+  const openModal = (card) => {
     if (!modal) return;
+    lastFocused = document.activeElement;
 
-    const name =
-      card.dataset.name || card.querySelector("h3")?.innerText || "Product";
-    const desc =
-      card.dataset.desc || card.querySelector("p")?.innerText || "";
-    const price = card.dataset.price || "";
-    const img =
-      card.dataset.img ||
-      card.querySelector("img")?.src ||
-      "https://source.unsplash.com/800x600/?medical";
+    const name  = card.dataset.name  || card.querySelector('h3')?.textContent || 'Product';
+    const desc  = card.dataset.desc  || card.querySelector('p')?.textContent  || '';
+    const price = card.dataset.price || '';
+    const unit  = card.dataset.unit  || '';
+    const cat   = card.querySelector('.product-category')?.textContent || '';
+    const img   = card.querySelector('img')?.src || '';
 
-    if (modalImg) {
-      modalImg.src = img;
-      modalImg.alt = name;
-    }
-    if (modalTitle) modalTitle.textContent = name;
-    if (modalDesc) modalDesc.textContent = desc;
-    if (modalPrice) modalPrice.textContent = price;
+    if (modalImg)      { modalImg.src = img; modalImg.alt = name; }
+    if (modalTitle)    modalTitle.textContent    = name;
+    if (modalDesc)     modalDesc.textContent     = desc;
+    if (modalPrice)    modalPrice.textContent    = price;
+    if (modalUnit)     modalUnit.textContent     = unit ? `/ ${unit}` : '';
+    if (modalCategory) modalCategory.textContent = cat;
 
     if (modalWhats) {
       modalWhats.onclick = () => {
         const msg = encodeURIComponent(
-          `Hello Kibellan Universal Solutions, I’d like a quote for: ${name} (${price}).`
+          `Hello Kibellan Universal Solutions, I'd like a quote for: ${name} (${price}${unit ? ' / ' + unit : ''}).`
         );
-        window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
+        window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank', 'noopener');
       };
     }
+    if (modalCall) {
+      modalCall.href = `tel:${CALL_NUMBER}`;
+    }
 
-    if (modalQuoteInline) {
-  modalQuoteInline.onclick = () => {
-    // Redirect to PayWithMe page
-    window.location.href = "https://codewithkaranja.github.io/kibellan-Pay/";
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modalClose?.focus();
   };
-}
 
+  const closeModal = () => {
+    if (!modal) return;
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused?.focus) lastFocused.focus();
+  };
 
-    modal.classList.add("active");
-    modal.setAttribute("aria-hidden", "false");
-  }
-
-  productCards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      const isBtn = e.target.closest(".btn-quote");
-      if (isBtn) {
-        e.stopPropagation();
-        openModalFromCard(card);
-        return;
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.btn-quote')) e.stopPropagation();
+      openModal(card);
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(card);
       }
-      openModalFromCard(card);
     });
   });
 
   if (modal && modalClose) {
-    modalClose.addEventListener("click", () => {
-      modal.classList.remove("active");
-      modal.setAttribute("aria-hidden", "true");
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
     });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.remove("active");
-        modal.setAttribute("aria-hidden", "true");
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        modal.classList.remove("active");
-        modal.setAttribute("aria-hidden", "true");
-      }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
     });
   }
 
-  /* ====== Sticky quote opens general WA chat ====== */
-  const stickyQuote = document.getElementById("stickyQuote");
-  if (stickyQuote) {
-    stickyQuote.addEventListener("click", () => {
-      const msg = encodeURIComponent(
-        "Hello Kibellan Universal Solutions, I would like a general quote / inquiry."
-      );
-      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
+  /* ---------- Testimonial Swiper ---------- */
+  if (window.Swiper) {
+    new Swiper('.testimonial-swiper', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      autoplay: { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },
+      pagination: {
+        el: '.testimonial-swiper .swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        0:   { slidesPerView: 1,   spaceBetween: 16 },
+        640: { slidesPerView: 2,   spaceBetween: 20 },
+        1024:{ slidesPerView: 3,   spaceBetween: 24 },
+      },
     });
   }
 
-  /* ====== Newsletter subscribe ====== */
-  document.querySelectorAll(".newsletter button").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const input = btn.parentElement.querySelector("input");
-      const val = input?.value?.trim();
-      if (!val) {
-        alert("Please enter your email address.");
-        return;
-      }
-      alert("Thanks — subscribed: " + val);
-      input.value = "";
-    });
-  });
-
-  /* ====== Accessibility ====== */
-  productCards.forEach((card) => {
-    card.setAttribute("tabindex", "0");
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") openModalFromCard(card);
-    });
-  });
-
-  /* ====== Search filter ====== */
-  const searchInput = document.getElementById("searchInput");
-  if (searchInput) {
-    searchInput.addEventListener("keyup", () => {
-      const query = searchInput.value.toLowerCase();
-      productCards.forEach((card) => {
-        const name = (card.dataset.name || "").toLowerCase();
-        card.style.display = name.includes(query) ? "block" : "none";
-      });
-    });
-  }
-
-  /* ====== Product slider ====== */
-  const slider = document.querySelector(".products-grid.slider");
-  if (slider) {
-    const cards = slider.querySelectorAll(".product-card");
-    if (cards.length) {
-      const cardWidth = cards[0].offsetWidth + 16;
-
-      // Swipe / drag support
-      let isDown = false, startX, scrollLeft;
-
-      slider.addEventListener("mousedown", (e) => {
-        isDown = true;
-        slider.classList.add("dragging");
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-      });
-
-      slider.addEventListener("mouseleave", () => (isDown = false));
-      slider.addEventListener("mouseup", () => (isDown = false));
-      slider.addEventListener("mousemove", (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1;
-        slider.scrollLeft = scrollLeft - walk;
-      });
-
-      // Auto-scroll
-      let autoScrollInterval;
-      function startAutoScroll() {
-        autoScrollInterval = setInterval(() => {
-          slider.scrollBy({ left: cardWidth, behavior: "smooth" });
-        }, 3000);
-      }
-      function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-      }
-      slider.addEventListener("mouseenter", stopAutoScroll);
-      slider.addEventListener("mouseleave", startAutoScroll);
-      startAutoScroll();
-    }
-  }
-});
+  /* ---------- Init ---------- */
+  updateVisible();
+})();

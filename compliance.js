@@ -1,5 +1,5 @@
 /* ============================================================
-   Kibellan — About Us page
+   Kibellan — Compliance page
    ============================================================ */
 (() => {
   'use strict';
@@ -42,8 +42,8 @@
     });
   }
 
-  /* ---------- Partnership form ---------- */
-  const form = document.getElementById('partnershipForm');
+  /* ---------- Compliance document request form ---------- */
+  const form = document.getElementById('complianceForm');
   if (form) {
     form.addEventListener('submit', (e) => {
       if (!form.checkValidity()) {
@@ -55,31 +55,12 @@
       const btn  = form.querySelector('.btn-submit');
       if (btn) {
         btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
       }
       if (card) {
         setTimeout(() => card.classList.add('is-success'), 300);
       }
       // Form continues to FormSubmit
-    });
-  }
-
-  /* ---------- Testimonials Swiper ---------- */
-  if (window.Swiper) {
-    new Swiper('.testimonial-swiper', {
-      loop: true,
-      grabCursor: true,
-      spaceBetween: 20,
-      autoplay: { delay: 5500, disableOnInteraction: false, pauseOnMouseEnter: true },
-      pagination: {
-        el: '.testimonial-swiper .swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        0:    { slidesPerView: 1, spaceBetween: 16 },
-        640:  { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 3, spaceBetween: 24 },
-      },
     });
   }
 
