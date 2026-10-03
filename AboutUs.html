@@ -2,59 +2,244 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>About Us | Kibellan Universal Solutions Kenya</title>
-  <meta name="description" content="Learn more about Kibellan Universal Solutions — Kenya's trusted supplier of dialysis and kidney treatment products. Serving hospitals, pharmacies and NGOs nationwide." />
-  <meta name="keywords" content="Kibellan Universal Solutions, dialysis supplies Kenya, kidney treatment products, medical equipment Nairobi, Heparin, Dialyzers, Wepox" />
-  <meta name="author" content="Kibellan Universal Solutions" />
-  <meta name="robots" content="index, follow" />
+  <!-- ============================================================
+       PRIMARY SEO — TITLE
+       "About" intent keyword. Front-loads brand + category.
+       ============================================================ -->
+  <title>About Kibellan Universal Solutions | Renal Supplier Kenya Since 2015</title>
+
+  <!-- ============================================================
+       PRIMARY SEO — META DESCRIPTION
+       Establishes credibility (since 2015), audience (hospitals,
+       pharmacies, NGOs), and value (reliable supply across Kenya).
+       ============================================================ -->
+  <meta
+    name="description"
+    content="Founded in 2015, Kibellan Universal Solutions has grown from a small renal consumables supplier into a trusted healthcare partner for hospitals, pharmacies and NGOs across Kenya."
+  />
+
+  <!-- ============================================================
+       ROBOTS — full indexing + rich SERP previews
+       ============================================================ -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- ============================================================
+       LANGUAGE & REGION
+       ============================================================ -->
+  <meta http-equiv="content-language" content="en-KE" />
+  <link rel="alternate" hreflang="en-KE" href="https://kibellanuniversalsolutions.co.ke/AboutUs.html" />
+  <link rel="alternate" hreflang="x-default" href="https://kibellanuniversalsolutions.co.ke/AboutUs.html" />
+
+  <!-- ============================================================
+       CANONICAL
+       ============================================================ -->
   <link rel="canonical" href="https://kibellanuniversalsolutions.co.ke/AboutUs.html" />
 
-  <meta name="geo.region" content="KE" />
-  <meta name="geo.placename" content="Machakos" />
-  <meta name="geo.position" content="-1.520833;37.267762" />
+  <!-- ============================================================
+       MOBILE BROWSER THEME
+       ============================================================ -->
+  <meta name="theme-color" content="#0d3b66" />
+  <meta name="msapplication-TileColor" content="#0d3b66" />
 
+  <!-- ============================================================
+       FORMAT DETECTION
+       ============================================================ -->
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- ============================================================
+       FAVICONS
+       ============================================================ -->
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- ============================================================
+       OPEN GRAPH — preview image when shared on WhatsApp, Facebook, etc.
+       ============================================================ -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Kibellan Universal Solutions | Kidney & Dialysis Supplies Kenya" />
-  <meta property="og:description" content="Kenyan-based medical supplier specialising in dialysis and kidney treatment products. Quality. Reliability. Care." />
+  <meta property="og:site_name" content="Kibellan Universal Solutions" />
+  <meta property="og:locale" content="en_KE" />
+  <meta property="og:title" content="About Kibellan Universal Solutions | Renal Supplier Kenya" />
+  <meta
+    property="og:description"
+    content="Founded in 2015 — trusted renal & dialysis supply partner for hospitals, pharmacies and NGOs across Kenya."
+  />
   <meta property="og:url" content="https://kibellanuniversalsolutions.co.ke/AboutUs.html" />
+  <meta property="og:image" content="https://kibellanuniversalsolutions.co.ke/images/og-about.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="About Kibellan Universal Solutions — Renal Supplier Kenya" />
 
+  <!-- ============================================================
+       TWITTER / X CARD
+       ============================================================ -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Kibellan Universal Solutions Kenya" />
-  <meta name="twitter:description" content="Leading supplier of kidney and dialysis supplies in Kenya." />
+  <meta name="twitter:site" content="@kibellan" />
+  <meta name="twitter:creator" content="@sarahadevelopers" />
+  <meta name="twitter:title" content="About Kibellan Universal Solutions" />
+  <meta
+    name="twitter:description"
+    content="Kenyan-based renal & dialysis supply partner since 2015. Serving hospitals, pharmacies and NGOs nationwide."
+  />
+  <meta name="twitter:image" content="https://kibellanuniversalsolutions.co.ke/images/og-about.jpg" />
+  <meta name="twitter:image:alt" content="About Kibellan Universal Solutions" />
 
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- ============================================================
+       PERFORMANCE — preconnect + dns-prefetch
+       ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
+  <!-- ============================================================
+       FONTS, ICONS, SLIDER LIBRARY
+       ============================================================ -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- ============================================================
+       STYLES
+       ============================================================ -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="AboutUs.css" />
 
+  <!-- ============================================================
+       STRUCTURED DATA — AboutPage + Organization + MedicalBusiness
+       + BreadcrumbList. Google uses this to build your Knowledge
+       Panel and enrich the SERP with breadcrumbs.
+       ============================================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Kibellan Universal Solutions",
-    "url": "https://kibellanuniversalsolutions.co.ke",
-    "description": "Registered Kenyan medical supplier offering dialysis and kidney treatment products to hospitals, pharmacies and NGOs nationwide.",
-    "foundingDate": "2015",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3rd Floor, Kamba Building, Ngei Road",
-      "addressLocality": "Machakos",
-      "addressCountry": "KE"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+254112450228",
-      "contactType": "Customer Service",
-      "areaServed": "KE",
-      "availableLanguage": "en"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kibellanuniversalsolutions.co.ke/#organization",
+        "name": "Kibellan Universal Solutions",
+        "url": "https://kibellanuniversalsolutions.co.ke/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kibellanuniversalsolutions.co.ke/images/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "foundingDate": "2015",
+        "description": "Kenyan supplier of renal and dialysis consumables for hospitals, pharmacies and NGOs.",
+        "slogan": "Supplying Renal Care, Empowering Healthcare",
+        "sameAs": [
+          "https://www.facebook.com/kibellan",
+          "https://www.linkedin.com/company/kibellan"
+        ]
+      },
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://kibellanuniversalsolutions.co.ke/#business",
+        "name": "Kibellan Universal Solutions",
+        "url": "https://kibellanuniversalsolutions.co.ke/",
+        "image": "https://kibellanuniversalsolutions.co.ke/images/og-about.jpg",
+        "description": "Supplier of renal and dialysis consumables across Kenya — bloodlines, dialyzers, fistula needles, heparin and concentrates.",
+        "priceRange": "KES 90 – 5,000",
+        "telephone": "+254112450228",
+        "email": "info@kibellanuniversalsolutions.co.ke",
+        "parentOrganization": { "@id": "https://kibellanuniversalsolutions.co.ke/#organization" },
+        "foundingDate": "2015",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3rd Floor, Kamba Building, Ngei Road",
+          "addressLocality": "Machakos",
+          "addressRegion": "Machakos County",
+          "postalCode": "90100",
+          "addressCountry": "KE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -1.520833,
+          "longitude": 37.267762
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Kenya"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "medicalSpecialty": "Nephrology",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+254112450228",
+            "contactType": "sales",
+            "areaServed": "KE",
+            "availableLanguage": ["en", "sw"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+254704498509",
+            "contactType": "customer support",
+            "areaServed": "KE",
+            "availableLanguage": ["en", "sw"]
+          }
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://kibellanuniversalsolutions.co.ke/AboutUs.html#webpage",
+        "url": "https://kibellanuniversalsolutions.co.ke/AboutUs.html",
+        "name": "About Kibellan Universal Solutions | Renal Supplier Kenya Since 2015",
+        "description": "Founded in 2015, Kibellan Universal Solutions has grown from a small renal consumables supplier into a trusted healthcare partner for hospitals, pharmacies and NGOs across Kenya.",
+        "inLanguage": "en-KE",
+        "isPartOf": { "@id": "https://kibellanuniversalsolutions.co.ke/#organization" },
+        "about": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://kibellanuniversalsolutions.co.ke/images/og-about.jpg"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kibellanuniversalsolutions.co.ke/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About Us",
+              "item": "https://kibellanuniversalsolutions.co.ke/AboutUs.html"
+            }
+          ]
+        }
+      }
+    ]
   }
   </script>
 </head>
