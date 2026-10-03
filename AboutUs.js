@@ -83,4 +83,48 @@
     });
   }
 
+  /* ---------- Story stat counters ---------- */
+  const stats = document.querySelectorAll('.story-stat-num[data-count]');
+  if (stats.length) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const animateCounter = (el) => {
+      const target = parseInt(el.dataset.count, 10) || 0;
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400;
+      const start = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        // easeOutCubic for a smooth deceleration
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      // Set final values immediately — no animation
+      stats.forEach((el) => {
+        el.textContent = (el.dataset.count || 0) + (el.dataset.suffix || '');
+      });
+    } else {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      stats.forEach((el) => observer.observe(el));
+    }
+  }
+
 })();
