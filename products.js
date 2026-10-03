@@ -183,13 +183,23 @@
     if (lastFocused?.focus) lastFocused.focus();
   };
 
+  /* ---------- Card click & keyboard handlers ---------- */
   cards.forEach(card => {
     card.addEventListener('click', (e) => {
-      if (e.target.closest('.btn-quote')) e.stopPropagation();
+      // Let real links through — image, title, and "View full details"
+      if (e.target.closest('a')) return;
+
+      // "Order Now" button still opens the modal
+      if (e.target.closest('.btn-quote')) {
+        e.stopPropagation();
+      }
+
       openModal(card);
     });
+
     card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
+      // Only open modal when the card itself is focused, not a link inside it
+      if (e.target === card && (e.key === 'Enter' || e.key === ' ')) {
         e.preventDefault();
         openModal(card);
       }
@@ -218,9 +228,9 @@
         clickable: true,
       },
       breakpoints: {
-        0:   { slidesPerView: 1,   spaceBetween: 16 },
-        640: { slidesPerView: 2,   spaceBetween: 20 },
-        1024:{ slidesPerView: 3,   spaceBetween: 24 },
+        0:    { slidesPerView: 1, spaceBetween: 16 },
+        640:  { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 24 },
       },
     });
   }

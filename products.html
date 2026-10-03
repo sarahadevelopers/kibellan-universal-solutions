@@ -7,14 +7,11 @@
 
   <!-- ============================================================
        PRIMARY SEO — TITLE
-       Commercial intent: "buy/price" focused. Front-loads the
-       highest-value keyword cluster.
        ============================================================ -->
   <title>Dialysis Consumables in Kenya | Buy Online | Kibellan Universal Solutions</title>
 
   <!-- ============================================================
        PRIMARY SEO — META DESCRIPTION
-       Matches buyer search intent: "where to buy", "price", "delivery".
        ============================================================ -->
   <meta
     name="description"
@@ -22,7 +19,7 @@
   />
 
   <!-- ============================================================
-       ROBOTS — full indexing + rich SERP previews
+       ROBOTS
        ============================================================ -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -59,7 +56,7 @@
   <link rel="manifest" href="/site.webmanifest" />
 
   <!-- ============================================================
-       OPEN GRAPH — WhatsApp / Facebook / LinkedIn preview card
+       OPEN GRAPH
        ============================================================ -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kibellan Universal Solutions" />
@@ -90,7 +87,7 @@
   <meta name="twitter:image:alt" content="Kibellan Universal Solutions — Product Catalogue" />
 
   <!-- ============================================================
-       PERFORMANCE — preconnect + dns-prefetch
+       PERFORMANCE
        ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -127,360 +124,359 @@
 
   <!-- ============================================================
        STRUCTURED DATA — CollectionPage + ItemList + 13 Products
-       This is the big one. Google reads every product here as a
-       structured entity, which can trigger rich results with
-       price, availability, and category in search.
        ============================================================ -->
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://kibellanuniversalsolutions.co.ke/#organization",
-      "name": "Kibellan Universal Solutions",
-      "url": "https://kibellanuniversalsolutions.co.ke/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://kibellanuniversalsolutions.co.ke/images/logo.png",
-        "width": 512,
-        "height": 512
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kibellanuniversalsolutions.co.ke/#organization",
+        "name": "Kibellan Universal Solutions",
+        "url": "https://kibellanuniversalsolutions.co.ke/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kibellanuniversalsolutions.co.ke/images/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "foundingDate": "2015",
+        "sameAs": [
+          "https://www.facebook.com/kibellan",
+          "https://www.linkedin.com/company/kibellan"
+        ]
       },
-      "foundingDate": "2015",
-      "sameAs": [
-        "https://www.facebook.com/kibellan",
-        "https://www.linkedin.com/company/kibellan"
-      ]
-    },
-    {
-      "@type": "MedicalBusiness",
-      "@id": "https://kibellanuniversalsolutions.co.ke/#business",
-      "name": "Kibellan Universal Solutions",
-      "url": "https://kibellanuniversalsolutions.co.ke/",
-      "image": "https://kibellanuniversalsolutions.co.ke/images/og-products.jpg",
-      "description": "Supplier of renal and dialysis consumables across Kenya.",
-      "priceRange": "KES 90 – 5,000",
-      "telephone": "+254112450228",
-      "email": "info@kibellanuniversalsolutions.co.ke",
-      "parentOrganization": { "@id": "https://kibellanuniversalsolutions.co.ke/#organization" },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "3rd Floor, Kamba Building, Ngei Road",
-        "addressLocality": "Machakos",
-        "addressRegion": "Machakos County",
-        "postalCode": "90100",
-        "addressCountry": "KE"
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://kibellanuniversalsolutions.co.ke/#business",
+        "name": "Kibellan Universal Solutions",
+        "url": "https://kibellanuniversalsolutions.co.ke/",
+        "image": "https://kibellanuniversalsolutions.co.ke/images/og-products.jpg",
+        "description": "Supplier of renal and dialysis consumables across Kenya.",
+        "priceRange": "KES 90 – 5,000",
+        "telephone": "+254112450228",
+        "email": "info@kibellanuniversalsolutions.co.ke",
+        "parentOrganization": { "@id": "https://kibellanuniversalsolutions.co.ke/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3rd Floor, Kamba Building, Ngei Road",
+          "addressLocality": "Machakos",
+          "addressRegion": "Machakos County",
+          "postalCode": "90100",
+          "addressCountry": "KE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -1.520833,
+          "longitude": 37.267762
+        },
+        "areaServed": { "@type": "Country", "name": "Kenya" },
+        "medicalSpecialty": "Nephrology"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -1.520833,
-        "longitude": 37.267762
+      {
+        "@type": "CollectionPage",
+        "@id": "https://kibellanuniversalsolutions.co.ke/products.html#webpage",
+        "url": "https://kibellanuniversalsolutions.co.ke/products.html",
+        "name": "Dialysis Consumables in Kenya | Buy Online | Kibellan",
+        "description": "Full catalogue of renal and dialysis consumables in Kenya — bloodlines, dialyzers, heparin, fistula needles, dressings and concentrates. Transparent Ksh pricing. Nationwide delivery.",
+        "inLanguage": "en-KE",
+        "isPartOf": { "@id": "https://kibellanuniversalsolutions.co.ke/#organization" },
+        "about": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://kibellanuniversalsolutions.co.ke/images/og-products.jpg"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kibellanuniversalsolutions.co.ke/" },
+            { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://kibellanuniversalsolutions.co.ke/products.html" }
+          ]
+        },
+        "mainEntity": { "@id": "https://kibellanuniversalsolutions.co.ke/products.html#itemlist" }
       },
-      "areaServed": { "@type": "Country", "name": "Kenya" },
-      "medicalSpecialty": "Nephrology"
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": "https://kibellanuniversalsolutions.co.ke/products.html#webpage",
-      "url": "https://kibellanuniversalsolutions.co.ke/products.html",
-      "name": "Dialysis Consumables in Kenya | Buy Online | Kibellan",
-      "description": "Full catalogue of renal and dialysis consumables in Kenya — bloodlines, dialyzers, heparin, fistula needles, dressings and concentrates. Transparent Ksh pricing. Nationwide delivery.",
-      "inLanguage": "en-KE",
-      "isPartOf": { "@id": "https://kibellanuniversalsolutions.co.ke/#organization" },
-      "about": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://kibellanuniversalsolutions.co.ke/images/og-products.jpg"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
+      {
+        "@type": "ItemList",
+        "@id": "https://kibellanuniversalsolutions.co.ke/products.html#itemlist",
+        "name": "Renal & Dialysis Consumables Catalogue",
+        "numberOfItems": 13,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Home",
-            "item": "https://kibellanuniversalsolutions.co.ke/"
+            "item": {
+              "@type": "Product",
+              "name": "Universal Bloodlines",
+              "category": "Dialysis Consumables",
+              "description": "Generic universal bloodlines for hemodialysis machines. Medical-grade PVC, EO sterile, universal port fitment.",
+              "sku": "UBL-001",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/universal-bloodlines.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/universal-bloodlines.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "450",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Products",
-            "item": "https://kibellanuniversalsolutions.co.ke/products.html"
+            "item": {
+              "@type": "Product",
+              "name": "Solucart Bicarbonate 720G",
+              "category": "Dialysis Consumables",
+              "description": "Solucart Bicarbonate (Bicarts) 720G for preparing dialysis bicarbonate concentrates.",
+              "sku": "SOLU-720",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/solucart-bicarbonate.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/solucart-bicarbonate.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "450",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "High Flux Dialyzers 1.8/2.0/2.1 m²",
+              "category": "Dialysis Consumables",
+              "description": "High-flux dialyzers with PES membranes, available in 1.8m², 2.0m² and 2.1m² surface areas.",
+              "sku": "HFD-2000",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/high-flux-dialyzers.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/high-flux-dialyzers.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "1300",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Product",
+              "name": "Heparin Injection 5000iu/ml",
+              "category": "Renal Medicines",
+              "description": "Heparin Injection 5000iu/ml — anticoagulant for dialysis and clinical procedures.",
+              "sku": "HEP-5000",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/heparin-injection.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/heparin-injection.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "400",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Product",
+              "name": "Premapore Dressing 10x25cm",
+              "category": "Wound Care",
+              "description": "Waterproof post-dialysis dressing, 10x25cm, comfortable adhesive for secure wound protection.",
+              "sku": "PREMA-1025",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/premapore-dressing.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/premapore-dressing.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "90",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Product",
+              "name": "Acid Concentrate 5 Litres",
+              "category": "Dialysis Concentrates",
+              "description": "Dialysis acid concentrate, 5 litres, formulated for safe and effective hemodialysis solutions.",
+              "sku": "ACID-5L",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/acid-concentrate.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/acid-concentrate.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "500",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Product",
+              "name": "Paediatric Dialyzers 1.4m²",
+              "category": "Dialysis Consumables",
+              "description": "Paediatric dialyzers 1.4m² — specifically designed for children's dialysis treatment.",
+              "sku": "PD-1400",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/paediatric-dialyzers.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/paediatric-dialyzers.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "1400",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "Product",
+              "name": "Citric Acid Disinfectant 5L (21%)",
+              "category": "Renal Equipment Care",
+              "description": "Medical-grade citric acid disinfectant, 5L, 21% concentration, for dialysis machine cleaning.",
+              "sku": "CAD-5L",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/citric-acid-disinfectant.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/citric-acid-disinfectant.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "5000",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "Product",
+              "name": "A/V Fistula Needles G16",
+              "category": "Dialysis Consumables",
+              "description": "A/V fistula needles G16 for vascular access during hemodialysis. Ultra-thin wall, siliconized bevel.",
+              "sku": "AVN-G16",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/av-fistula-needles.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/av-fistula-needles.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "140",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "Product",
+              "name": "Surgical Tapes",
+              "category": "Consumables",
+              "description": "Medical-grade surgical tapes for secure dressing and tubing fixation in dialysis and general procedures.",
+              "sku": "ST-001",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/surgical-tapes.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/surgical-tapes.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "90",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+              "@type": "Product",
+              "name": "Wepox 4000iu Injection",
+              "category": "Renal Medicines",
+              "description": "Wepox 4000iu injection for anaemia management in kidney patients. Cold-chain compliant handling.",
+              "sku": "WEP-4000",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/wepox.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/wepox.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "price": "750",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+              "@type": "Product",
+              "name": "Pharmaceuticals",
+              "category": "Medicines",
+              "description": "Curated selection of branded and generic pharmaceuticals sourced from trusted manufacturers.",
+              "sku": "PHARM-001",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/pharmaceuticals.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/pharmaceuticals.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "item": {
+              "@type": "Product",
+              "name": "Injectables",
+              "category": "Medicines",
+              "description": "Vaccines, insulin and other injectables handled to cold-chain standards.",
+              "sku": "INJ-001",
+              "image": "https://kibellanuniversalsolutions.co.ke/images/injectables.jpg",
+              "url": "https://kibellanuniversalsolutions.co.ke/injectables.html",
+              "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "KES",
+                "availability": "https://schema.org/InStock",
+                "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
+              }
+            }
           }
         ]
-      },
-      "mainEntity": { "@id": "https://kibellanuniversalsolutions.co.ke/products.html#itemlist" }
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://kibellanuniversalsolutions.co.ke/products.html#itemlist",
-      "name": "Renal & Dialysis Consumables Catalogue",
-      "numberOfItems": 13,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Product",
-            "name": "Universal Bloodlines",
-            "category": "Dialysis Consumables",
-            "description": "Generic universal bloodlines for hemodialysis machines. Medical-grade PVC, EO sterile, universal port fitment.",
-            "sku": "UBL-001",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/universal-bloodlines.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "450",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "Product",
-            "name": "Solucart Bicarbonate 720G",
-            "category": "Dialysis Consumables",
-            "description": "Solucart Bicarbonate (Bicarts) 720G for preparing dialysis bicarbonate concentrates.",
-            "sku": "SOLU-720",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/solucart-bicarbonate.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "450",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "Product",
-            "name": "High Flux Dialyzers 1.8/2.0/2.1 m²",
-            "category": "Dialysis Consumables",
-            "description": "High-flux dialyzers with PES membranes, available in 1.8m², 2.0m² and 2.1m² surface areas.",
-            "sku": "HFD-2000",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/high-flux-dialyzers.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "1300",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "Product",
-            "name": "Heparin Injection 5000iu/ml",
-            "category": "Renal Medicines",
-            "description": "Heparin Injection 5000iu/ml — anticoagulant for dialysis and clinical procedures.",
-            "sku": "HEP-5000",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/heparin-injection.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "400",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "Product",
-            "name": "Premapore Dressing 10x25cm",
-            "category": "Wound Care",
-            "description": "Waterproof post-dialysis dressing, 10x25cm, comfortable adhesive for secure wound protection.",
-            "sku": "PREMA-1025",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/premapore-dressing.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "90",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "Product",
-            "name": "Acid Concentrate 5 Litres",
-            "category": "Dialysis Concentrates",
-            "description": "Dialysis acid concentrate, 5 litres, formulated for safe and effective hemodialysis solutions.",
-            "sku": "ACID-5L",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/acid-concentrate.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "500",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "Product",
-            "name": "Paediatric Dialyzers 1.4m²",
-            "category": "Dialysis Consumables",
-            "description": "Paediatric dialyzers 1.4m² — specifically designed for children's dialysis treatment.",
-            "sku": "PD-1400",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/paediatric-dialyzers.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "1400",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "item": {
-            "@type": "Product",
-            "name": "Citric Acid Disinfectant 5L (21%)",
-            "category": "Renal Equipment Care",
-            "description": "Medical-grade citric acid disinfectant, 5L, 21% concentration, for dialysis machine cleaning.",
-            "sku": "CAD-5L",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/citric-acid-disinfectant.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "5000",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "item": {
-            "@type": "Product",
-            "name": "A/V Fistula Needles G16",
-            "category": "Dialysis Consumables",
-            "description": "A/V fistula needles G16 for vascular access during hemodialysis. Ultra-thin wall, siliconized bevel.",
-            "sku": "AVN-G16",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/av-fistula-needles.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "140",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "item": {
-            "@type": "Product",
-            "name": "Surgical Tapes",
-            "category": "Consumables",
-            "description": "Medical-grade surgical tapes for secure dressing and tubing fixation in dialysis and general procedures.",
-            "sku": "ST-001",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/surgical-tapes.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "90",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "item": {
-            "@type": "Product",
-            "name": "Wepox 4000iu Injection",
-            "category": "Renal Medicines",
-            "description": "Wepox 4000iu injection for anaemia management in kidney patients. Cold-chain compliant handling.",
-            "sku": "WEP-4000",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/wepox.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "750",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "item": {
-            "@type": "Product",
-            "name": "Pharmaceuticals",
-            "category": "Medicines",
-            "description": "Curated selection of branded and generic pharmaceuticals sourced from trusted manufacturers.",
-            "sku": "PHARM-001",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/pharmaceuticals.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "price": "150",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "item": {
-            "@type": "Product",
-            "name": "Injectables",
-            "category": "Medicines",
-            "description": "Vaccines, insulin and other injectables handled to cold-chain standards.",
-            "sku": "INJ-001",
-            "image": "https://kibellanuniversalsolutions.co.ke/images/injectables.jpg",
-            "brand": { "@type": "Brand", "name": "Kibellan Universal Solutions" },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "KES",
-              "availability": "https://schema.org/InStock",
-              "seller": { "@id": "https://kibellanuniversalsolutions.co.ke/#business" }
-            }
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -521,6 +517,7 @@
             </ul>
           </li>
           <li><a href="compliance.html" class="nav-link">Compliance</a></li>
+          <li><a href="contacts.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -557,7 +554,6 @@
   </section>
 
   <!-- ============ CONTROLS ============ -->
-    <!-- ============ CONTROLS ============ -->
   <section class="catalogue-controls" aria-label="Filter products">
     <div class="container-wrapper">
 
@@ -596,237 +592,276 @@
         <!-- 1 — DIALYSIS -->
         <article class="product-card" data-category="Dialysis" data-name="Universal Bloodlines"
                  data-desc="Wide range of generic Universal Bloodlines for hemodialysis machines."
-                 data-price="Ksh 450" data-unit="Set" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 450" data-unit="Set">
+          <a href="universal-bloodlines.html" class="product-thumb" aria-label="View Universal Bloodlines details">
             <img src="https://media.istockphoto.com/id/466824118/photo/peritoneal-dialysis-dialysis.webp?a=1&b=1&s=612x612&w=0&k=20&c=2A18xNDJx2la7HznJHg2_wKOKTk1G2m5X6a6sf3oo6g=" alt="Universal Bloodlines" loading="lazy">
             <span class="product-badge">Bestseller</span>
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Dialysis Consumables</span>
-            <h3>Universal Bloodlines</h3>
+            <h3><a href="universal-bloodlines.html">Universal Bloodlines</a></h3>
             <p>Generic universal bloodlines.<br><strong>Unit: Set</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 450</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="universal-bloodlines.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 2 — DIALYSIS -->
         <article class="product-card" data-category="Dialysis" data-name="Solucart Bicarbonate 720G"
                  data-desc="Commonly known as Bicarts. Sourced from trusted manufacturers."
-                 data-price="Ksh 450" data-unit="Cartridge" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 450" data-unit="Cartridge">
+          <a href="solucart-bicarbonate.html" class="product-thumb" aria-label="View Solucart Bicarbonate details">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSHPy9UQxpwEONRCyt1CgfEST9gknM5CYgww&s" alt="Solucart Bicarbonate 720G" loading="lazy">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Dialysis Consumables</span>
-            <h3>Solucart Bicarbonate 720G</h3>
+            <h3><a href="solucart-bicarbonate.html">Solucart Bicarbonate 720G</a></h3>
             <p>Commonly known as Bicarts.<br><strong>Unit: Cartridge</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 450</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="solucart-bicarbonate.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 3 — DIALYSIS -->
         <article class="product-card" data-category="Dialysis" data-name="High Flux Dialyzers 1.8/2.0/2.1 m²"
                  data-desc="High-quality dialyzers available in multiple surface areas."
-                 data-price="Ksh 1,300" data-unit="Piece" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 1,300" data-unit="Piece">
+          <a href="high-flux-dialyzers.html" class="product-thumb" aria-label="View High Flux Dialyzers details">
             <img src="images/high-flux-dialyzers.jpg" alt="High Flux Dialyzers" loading="lazy" onerror="this.src='https://cpimg.tistatic.com/11171648/b/4/Dora-Dialyzer-13P..jpg'">
             <span class="product-badge">High Flux</span>
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Dialysis Consumables</span>
-            <h3>High Flux Dialyzers</h3>
+            <h3><a href="high-flux-dialyzers.html">High Flux Dialyzers</a></h3>
             <p>1.8 / 2.0 / 2.1 m² surfaces.<br><strong>Unit: Piece</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 1,300</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="high-flux-dialyzers.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 4 — MEDICINE -->
         <article class="product-card" data-category="Medicine" data-name="Heparin Injection 5000iu/ml"
                  data-desc="High-quality heparin injections sourced from trusted manufacturers."
-                 data-price="Ksh 400" data-unit="Vial" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 400" data-unit="Vial">
+          <a href="heparin-injection.html" class="product-thumb" aria-label="View Heparin Injection details">
             <img src="images/heparin-injection.jpg" alt="Heparin Injection" loading="lazy" onerror="this.src='https://media.istockphoto.com/id/157318221/photo/syringe-and-vials-with-medicine.webp?a=1&b=1&s=612x612&w=0&k=20&c=aWjr9Qr4ziioIcnxlosGy24KrBEdRxVI_cfrGysrBIA='">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Renal Medicines</span>
-            <h3>Heparin Injection 5000iu/ml</h3>
+            <h3><a href="heparin-injection.html">Heparin Injection 5000iu/ml</a></h3>
             <p>Anticoagulant for dialysis.<br><strong>Unit: Vial</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 400</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="heparin-injection.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 5 — CONSUMABLES -->
         <article class="product-card" data-category="Consumables" data-name="Premapore Dressing 10x25cm"
                  data-desc="Waterproof post-dialysis dressing for wound protection."
-                 data-price="Ksh 90" data-unit="Piece" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 90" data-unit="Piece">
+          <a href="premapore-dressing.html" class="product-thumb" aria-label="View Premapore Dressing details">
             <img src="images/premapore-dressing.jpg" alt="Premapore Dressing" loading="lazy" onerror="this.src='https://media.istockphoto.com/id/1225254344/photo/several-disposable-medical-face-masks-and-a-pair-of-latex-gloves.webp?a=1&b=1&s=612x612&w=0&k=20&c=OGZQ5LF__m1nTGAXi0OkR1EpHi7UET9EgMq5b8atciQ='">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Wound Care</span>
-            <h3>Premapore Dressing 10×25cm</h3>
+            <h3><a href="premapore-dressing.html">Premapore Dressing 10×25cm</a></h3>
             <p>Waterproof, comfortable.<br><strong>Unit: Piece</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 90</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="premapore-dressing.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 6 — DIALYSIS -->
         <article class="product-card" data-category="Dialysis" data-name="Acid Concentrate 5 Litres"
                  data-desc="Dialysis acid concentrate formulated for safe, effective hemodialysis."
-                 data-price="Ksh 500" data-unit="Can" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 500" data-unit="Can">
+          <a href="acid-concentrate.html" class="product-thumb" aria-label="View Acid Concentrate details">
             <img src="images/acid-concentrate.jpg" alt="Acid Concentrate 5L" loading="lazy" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9xSEpyPuqJjmW_O5DtV-Bw3QZkNuAI-goww&s'">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Dialysis Concentrates</span>
-            <h3>Acid Concentrate 5 Litres</h3>
+            <h3><a href="acid-concentrate.html">Acid Concentrate 5 Litres</a></h3>
             <p>Safe &amp; effective hemodialysis.<br><strong>Unit: Can</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 500</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="acid-concentrate.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 7 — DIALYSIS -->
         <article class="product-card" data-category="Dialysis" data-name="Paediatric Dialyzers 1.4m²"
                  data-desc="Child-tailored dialyzers sourced from trusted manufacturers."
-                 data-price="Ksh 1,400" data-unit="Piece" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 1,400" data-unit="Piece">
+          <a href="paediatric-dialyzers.html" class="product-thumb" aria-label="View Paediatric Dialyzers details">
             <img src="https://cpimg.tistatic.com/11171648/b/4/Dora-Dialyzer-13P..jpg" alt="Paediatric Dialyzers" loading="lazy">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Dialysis Consumables</span>
-            <h3>Paediatric Dialyzers 1.4m²</h3>
+            <h3><a href="paediatric-dialyzers.html">Paediatric Dialyzers 1.4m²</a></h3>
             <p>Designed for children.<br><strong>Unit: Piece</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 1,400</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="paediatric-dialyzers.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 8 — EQUIPMENT CARE -->
         <article class="product-card" data-category="Equipment Care" data-name="Citric Acid Disinfectant 5L (21%)"
                  data-desc="Medical-grade citric acid disinfectant for dialysis machine cleaning."
-                 data-price="Ksh 5,000" data-unit="Can" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 5,000" data-unit="Can">
+          <a href="citric-acid-disinfectant.html" class="product-thumb" aria-label="View Citric Acid Disinfectant details">
             <img src="images/citric-acid-disinfectant.jpg" alt="Citric Acid Disinfectant" loading="lazy" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSHPy9UQxpwEONRCyt1CgfEST9gknM5CYgww&s'">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Renal Equipment Care</span>
-            <h3>Citric Acid Disinfectant 5L</h3>
+            <h3><a href="citric-acid-disinfectant.html">Citric Acid Disinfectant 5L</a></h3>
             <p>21% concentration disinfectant.<br><strong>Unit: Can</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 5,000</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="citric-acid-disinfectant.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 9 — DIALYSIS -->
         <article class="product-card" data-category="Dialysis" data-name="A/V Fistulas Needles G16"
                  data-desc="Generic and branded G16 fistula needles for vascular access."
-                 data-price="Ksh 140" data-unit="Pair" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 140" data-unit="Pair">
+          <a href="av-fistula-needles.html" class="product-thumb" aria-label="View A/V Fistula Needles details">
             <img src="images/av-fistula-needles.jpg" alt="A/V Fistula Needles" loading="lazy" onerror="this.src='https://cpimg.tistatic.com/11171648/b/4/Dora-Dialyzer-13P..jpg'">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Dialysis Consumables</span>
-            <h3>A/V Fistulas Needles G16</h3>
+            <h3><a href="av-fistula-needles.html">A/V Fistulas Needles G16</a></h3>
             <p>Gentle cannulation.<br><strong>Unit: Pair (2)</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 140</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="av-fistula-needles.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 10 — CONSUMABLES -->
         <article class="product-card" data-category="Consumables" data-name="Surgical Tapes"
                  data-desc="High-quality medical-grade surgical tapes."
-                 data-price="Ksh 90" data-unit="Piece" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 90" data-unit="Piece">
+          <a href="surgical-tapes.html" class="product-thumb" aria-label="View Surgical Tapes details">
             <img src="images/surgical-tapes.jpg" alt="Surgical Tapes" loading="lazy" onerror="this.src='https://media.istockphoto.com/id/1225254344/photo/several-disposable-medical-face-masks-and-a-pair-of-latex-gloves.webp?a=1&b=1&s=612x612&w=0&k=20&c=OGZQ5LF__m1nTGAXi0OkR1EpHi7UET9EgMq5b8atciQ='">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Consumables</span>
-            <h3>Surgical Tapes</h3>
+            <h3><a href="surgical-tapes.html">Surgical Tapes</a></h3>
             <p>Medical-grade adhesive.<br><strong>Unit: Piece</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 90</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="surgical-tapes.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 11 — MEDICINE -->
         <article class="product-card" data-category="Medicine" data-name="Wepox 4000iu Injection"
                  data-desc="Wepox 4000iu for anemia management in kidney patients."
-                 data-price="Ksh 750" data-unit="Vial" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Ksh 750" data-unit="Vial">
+          <a href="wepox.html" class="product-thumb" aria-label="View Wepox 4000iu details">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9xSEpyPuqJjmW_O5DtV-Bw3QZkNuAI-goww&s" alt="Wepox 4000iu" loading="lazy">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Renal Medicines</span>
-            <h3>Wepox 4000iu</h3>
+            <h3><a href="wepox.html">Wepox 4000iu</a></h3>
             <p>Anaemia management.<br><strong>Unit: Vial</strong></p>
             <div class="product-meta">
               <span class="price">Ksh 750</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="wepox.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 12 — MEDICINE -->
         <article class="product-card" data-category="Medicine" data-name="Pharmaceuticals"
                  data-desc="Curated selection of branded and generic pharmaceuticals."
-                 data-price="Request Quote" data-unit="Assorted" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Request Quote" data-unit="Assorted">
+          <a href="pharmaceuticals.html" class="product-thumb" aria-label="View Pharmaceuticals details">
             <img src="https://images.unsplash.com/photo-1617881770125-6fb0d039ecde?w=800&auto=format&fit=crop&q=60" alt="Pharmaceuticals" loading="lazy">
-          </div>
+          </a>
           <div class="product-body">
             <span class="product-category">Medicines</span>
-            <h3>Pharmaceuticals</h3>
+            <h3><a href="pharmaceuticals.html">Pharmaceuticals</a></h3>
             <p>Branded &amp; generic range.<br><strong>Unit: Assorted</strong></p>
             <div class="product-meta">
               <span class="price">Request Quote</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="pharmaceuticals.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
         <!-- 13 — MEDICINE -->
         <article class="product-card" data-category="Medicine" data-name="Injectables"
                  data-desc="Vaccines, insulin and other injectables, handled to cold-chain standards."
-                 data-price="Request Quote" data-unit="Assorted" tabindex="0">
-          <div class="product-thumb">
+                 data-price="Request Quote" data-unit="Assorted">
+          <a href="injectables.html" class="product-thumb" aria-label="View Injectables details">
             <img src="https://media.istockphoto.com/id/157318221/photo/syringe-and-vials-with-medicine.webp?a=1&b=1&s=612x612&w=0&k=20&c=aWjr9Qr4ziioIcnxlosGy24KrBEdRxVI_cfrGysrBIA=" alt="Injectables" loading="lazy">
-            <span class="product-badge">Sale</span>
-          </div>
+            <span class="product-badge">Cold Chain</span>
+          </a>
           <div class="product-body">
             <span class="product-category">Medicines</span>
-            <h3>Injectables</h3>
+            <h3><a href="injectables.html">Injectables</a></h3>
             <p>Cold-chain compliant.<br><strong>Unit: Assorted</strong></p>
             <div class="product-meta">
               <span class="price">Request Quote</span>
               <button class="btn-quote" data-trigger="quote">Order Now</button>
             </div>
+            <a href="injectables.html" class="product-link-more">
+              View full details <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </article>
 
@@ -841,6 +876,7 @@
 
     </div>
   </main>
+
   <!-- ============ TESTIMONIALS — SWIPER ============ -->
   <section class="testimonials" aria-labelledby="testimonialsHeading">
     <div class="container-wrapper">
@@ -925,17 +961,26 @@
       <h3>Request a Bulk Quote</h3>
       <p>Tell us what you need and your delivery location. We respond within 24 hours.</p>
 
-      <form action="#" method="POST" novalidate>
+      <form action="https://formsubmit.co/kibellanuniversalsolutions@gmail.com" method="POST" novalidate>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="Bulk quote request — Products page" />
+        <input type="hidden" name="source_page" value="products.html" />
+
         <div class="form-grid">
-          <input type="text" name="fullName" placeholder="Full Name" required />
+          <input type="text" name="name" placeholder="Full Name" required />
           <input type="text" name="institution" placeholder="Institution / Hospital Name" required />
           <input type="email" name="email" placeholder="Institutional Email" required />
           <input type="tel" name="phone" placeholder="Phone / WhatsApp" required />
           <input type="text" name="location" placeholder="Delivery Location" />
           <input type="text" name="products" placeholder="Products Required (optional)" />
         </div>
-        <textarea name="details" rows="4" placeholder="Notes — quantities, batch sizes, timelines, special requirements..."></textarea>
-        <button type="submit" class="btn-submit">Submit Quote Request</button>
+
+        <textarea name="details" rows="4" placeholder="Notes — quantities, batch sizes, timelines, special requirements..." required></textarea>
+
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          Submit Quote Request
+        </button>
       </form>
     </div>
   </section>
@@ -972,10 +1017,10 @@
         <div class="footer-col">
           <h4>Product Pipelines</h4>
           <ul class="footer-links">
-            <li><a href="products.html">Dialysis Consumables</a></li>
-            <li><a href="products.html">Hollow Fiber Dialyzers</a></li>
-            <li><a href="products.html">AV Fistula Needle Sets</a></li>
-            <li><a href="products.html">Renal Equipment Care</a></li>
+            <li><a href="universal-bloodlines.html">Universal Bloodlines</a></li>
+            <li><a href="high-flux-dialyzers.html">High Flux Dialyzers</a></li>
+            <li><a href="solucart-bicarbonate.html">Solucart Bicarbonate</a></li>
+            <li><a href="acid-concentrate.html">Acid Concentrate 5L</a></li>
           </ul>
         </div>
 
@@ -995,7 +1040,7 @@
           </p>
           <p class="contact-info-item">
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            <span>Nairobi, Kenya</span>
+            <span>Machakos, Kenya</span>
           </p>
           <div class="footer-socials">
             <a href="#" aria-label="LinkedIn Network"><i class="fab fa-linkedin" aria-hidden="true"></i></a>

@@ -5,5 +5,13 @@ Allow: /
 Disallow: /.git/
 Disallow: /.vscode/
 
+# Block source file for tooling
+Disallow: /generate-product-pages.js
+Disallow: /products-data.js
+
+# Explicitly allow CSS and JS (some old crawlers are picky)
+Allow: /*.css$
+Allow: /*.js$
+
 # Sitemap
 Sitemap: https://kibellanuniversalsolutions.co.ke/sitemap.xml
