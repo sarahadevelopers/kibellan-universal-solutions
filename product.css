@@ -399,28 +399,169 @@
 }
 
 /* ============================================================
-   RELATED PRODUCTS
+   RELATED PRODUCTS — PREMIUM "Used Together" SECTION
    ============================================================ */
-.related-products {
-  padding: 72px 0;
+.related-section {
+  padding: 88px 0;
   background: var(--bg-light);
   border-top: 1px solid var(--border-color);
 }
-.related-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
+
 .related-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
+  max-width: 640px;
+  margin-inline: auto;
 }
 .related-header h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 500;
   color: var(--primary-blue);
+  letter-spacing: -0.02em;
+  margin: 12px 0 12px;
 }
-.related-header p { color: var(--text-muted); }
+.related-header p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* ---------- CARD ---------- */
+.related-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s var(--ease),
+              box-shadow 0.3s var(--ease),
+              border-color 0.3s var(--ease);
+}
+
+.related-card:hover,
+.related-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(11, 27, 43, 0.10),
+              0 4px 10px rgba(11, 27, 43, 0.04);
+  border-color: rgba(0, 180, 216, 0.4);
+  outline: none;
+}
+
+.related-card:focus-visible {
+  box-shadow: 0 24px 48px rgba(11, 27, 43, 0.10),
+              0 0 0 3px rgba(0, 180, 216, 0.25);
+}
+
+/* ---------- IMAGE ---------- */
+.related-thumb {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(135deg, #F1F7FF 0%, #EAF7FB 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.related-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.related-card:hover .related-thumb img,
+.related-card:focus-visible .related-thumb img {
+  transform: scale(1.06);
+}
+
+/* ---------- BODY ---------- */
+.related-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.related-category {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  background: rgba(0, 180, 216, 0.08);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.related-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--primary-blue);
+  line-height: 1.3;
+  margin: 0;
+  transition: color 0.2s var(--ease);
+}
+
+.related-card:hover h3,
+.related-card:focus-visible h3 {
+  color: var(--accent-teal);
+}
+
+/* ---------- META ROW ---------- */
+.related-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.related-price {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-blue);
+  letter-spacing: -0.01em;
+}
+
+.related-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary-blue);
+  transition: gap 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.related-card:hover .related-arrow,
+.related-card:focus-visible .related-arrow {
+  color: var(--accent-teal);
+  gap: 10px;
+}
+
+.related-arrow i {
+  font-size: 11px;
+}
 
 /* ============================================================
    PRODUCT CTA BAND
@@ -484,37 +625,8 @@
 }
 
 /* ============================================================
-   RESPONSIVE
+   LINKED PRODUCT CARDS (for catalogue grid)
    ============================================================ */
-@media (max-width: 900px) {
-  .product-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .product-hero-visual {
-    position: static;
-  }
-  .product-hero-copy h1 { font-size: 28px; }
-  .product-price-current { font-size: 26px; }
-}
-
-@media (max-width: 640px) {
-  .product-hero { padding: 24px 0 48px; }
-  .product-hero-visual { padding: 20px; }
-  .product-hero-copy h1 { font-size: 24px; }
-  .product-trust { grid-template-columns: 1fr; }
-  .product-cta-row { flex-direction: column; }
-  .product-cta-row .btn-order-primary,
-  .product-cta-row .btn-order-whatsapp { width: 100%; justify-content: center; }
-  .product-qty { width: 100%; justify-content: center; }
-  .spec-table th, .spec-table td { padding: 12px 14px; font-size: 14px; }
-  .product-details-section { padding: 48px 0; }
-  .related-products { padding: 48px 0; }
-  .product-cta-band { padding: 56px 0; }
-  .product-cta-band h2 { font-size: 22px; }
-}
-
-/* Linked product cards */
 a.product-thumb {
   display: block;
   color: inherit;
@@ -546,3 +658,105 @@ a.product-thumb {
   gap: 10px;
 }
 .product-link-more i { font-size: 11px; }
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+@media (max-width: 900px) {
+  .product-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .product-hero-visual {
+    position: static;
+  }
+  .product-hero-copy h1 { font-size: 28px; }
+  .product-price-current { font-size: 26px; }
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .related-section {
+    padding: 64px 0;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+@media (max-width: 640px) {
+  .product-hero { padding: 24px 0 48px; }
+  .product-hero-visual { padding: 20px; }
+  .product-hero-copy h1 { font-size: 24px; }
+  .product-trust { grid-template-columns: 1fr; }
+  .product-cta-row { flex-direction: column; }
+  .product-cta-row .btn-order-primary,
+  .product-cta-row .btn-order-whatsapp { width: 100%; justify-content: center; }
+  .product-qty { width: 100%; justify-content: center; }
+  .spec-table th, .spec-table td { padding: 12px 14px; font-size: 14px; }
+  .product-details-section { padding: 48px 0; }
+  .product-cta-band { padding: 56px 0; }
+  .product-cta-band h2 { font-size: 22px; }
+
+  /* Related products — mobile */
+  .related-section {
+    padding: 56px 0;
+  }
+
+  .related-header {
+    margin-bottom: 32px;
+    padding-inline: 8px;
+  }
+  .related-header h2 {
+    font-size: 22px;
+  }
+  .related-header p {
+    font-size: 14px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .related-thumb {
+    height: 170px;
+  }
+
+  .related-body {
+    padding: 18px 18px 20px;
+    gap: 10px;
+  }
+
+  .related-card h3 {
+    font-size: 16px;
+  }
+
+  .related-price {
+    font-size: 15px;
+  }
+
+  /* Kill hover lift on mobile — use :active for tap feedback */
+  .related-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border-color);
+  }
+  .related-card:active {
+    transform: scale(0.985);
+    border-color: rgba(0, 180, 216, 0.4);
+    transition: transform 0.12s var(--ease);
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .related-card,
+  .related-thumb img,
+  .related-arrow {
+    transition: none !important;
+  }
+}
