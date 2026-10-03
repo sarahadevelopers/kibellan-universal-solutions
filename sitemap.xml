@@ -5,46 +5,151 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- ============================================
+       CORE PAGES
+       ============================================ -->
+
   <!-- Homepage -->
   <url>
-    <loc>https://kibellanuniversalsolutions.co.ke//</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kibellanuniversalsolutions.co.ke/</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
- 
+  <!-- Commercial Catalogue -->
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/products.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <!-- About -->
   <url>
-    <loc>https://kibellanuniversalsolutions.co.ke//AboutUs.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kibellanuniversalsolutions.co.ke/AboutUs.html</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Contacts -->
+  <!-- Quality & Compliance -->
   <url>
-    <loc>https://kibellanuniversalsolutions.co.ke//contacts.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kibellanuniversalsolutions.co.ke/compliance.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/contacts.html</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Partnerships -->
+  <!-- ============================================
+       PRODUCT PAGES — Dialysis Consumables
+       ============================================ -->
+
   <url>
-    <loc>https://kibellanuniversalsolutions.co.ke//Partnerships.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kibellanuniversalsolutions.co.ke/universal-bloodlines.html</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Products -->
   <url>
-    <loc>https://kibellanuniversalsolutions.co.ke//products.html</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://kibellanuniversalsolutions.co.ke/high-flux-dialyzers.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/av-fistula-needles.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/paediatric-dialyzers.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/solucart-bicarbonate.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/acid-concentrate.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================
+       PRODUCT PAGES — Medicines
+       ============================================ -->
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/heparin-injection.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/wepox.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/pharmaceuticals.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/injectables.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================
+       PRODUCT PAGES — Consumables & Equipment Care
+       ============================================ -->
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/citric-acid-disinfectant.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/premapore-dressing.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://kibellanuniversalsolutions.co.ke/surgical-tapes.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
